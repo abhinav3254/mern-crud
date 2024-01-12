@@ -20,6 +20,25 @@ function Home() {
             .catch(error => console.log(error));
     }
 
+    const deleteEmployee = (email) => {
+        axios
+            .delete('http://localhost:8080/' + email)
+            .then(response => {
+                if (response.status === 200) {
+                    console.log('Employee deleted successfully');
+                } else {
+                    // Handle cases where deletion was not successful
+                    console.log('Employee not deleted');
+                }
+            })
+            .catch(error => {
+                // Handle error cases
+                console.error('Error deleting employee:', error);
+                alert('Something went wrong');
+            });
+    };
+
+
     // Fetch data when the component mounts
     useEffect(() => {
         getEmployees();
@@ -45,7 +64,7 @@ function Home() {
                     </div>
                     <p>{employee.registerDate}</p>
                     <div className="row">
-                        <button>Delete</button>
+                        <button onClick={() => deleteEmployee(employee.email)}>Delete</button>
                         <button>Update</button>
                     </div>
                 </div>
