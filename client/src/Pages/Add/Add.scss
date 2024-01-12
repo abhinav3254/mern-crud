@@ -1,0 +1,28 @@
+.form-data {
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: auto;
+
+        input {
+            margin: 4px;
+            height: 1.5rem;
+        }
+
+        button {
+            width: fit-content;
+            margin: auto;
+            padding: 10px 20px;
+            border: none;
+            background-color: #7F57F1;
+            color: white;
+
+            &:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+        }
+    }
+}
