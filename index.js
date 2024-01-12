@@ -2,6 +2,12 @@ const express = require('express');
 require('./db');
 const PORT = 8080;
 
+const cors = require('cors');
+
+// Enable CORS for all routes
+app.use(cors());
+
+
 const routes = require('./routes/routes');  // Import the router
 
 const app = express();
