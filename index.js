@@ -4,13 +4,12 @@ const PORT = 8080;
 
 const cors = require('cors');
 
-// Enable CORS for all routes
-app.use(cors());
-
-
 const routes = require('./routes/routes');  // Import the router
 
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Middleware to parse JSON
 app.use(express.json());
