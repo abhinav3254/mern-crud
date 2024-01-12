@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import './Home.scss'
 import axios from 'axios';
 
@@ -65,7 +66,9 @@ function Home() {
                     <p>{employee.registerDate}</p>
                     <div className="row">
                         <button onClick={() => deleteEmployee(employee.email)}>Delete</button>
-                        <button>Update</button>
+                        <button>
+                            <Link to={{ pathname: '/update', state: { selectedEmployee: employee } }}>Update</Link>
+                        </button>
                     </div>
                 </div>
             ))}
