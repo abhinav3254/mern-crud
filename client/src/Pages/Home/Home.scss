@@ -1,0 +1,33 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+
+    p {
+        text-align: center;
+    }
+
+
+    .row {
+        padding: 2px 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        button {
+            margin: auto;
+            border: none;
+            border-radius: 2px;
+            padding: 10px 20px;
+            background-color: #7F57F1;
+            color: white;
+            transition: all 0.9s;
+
+            &:hover {
+                padding: 15px 25px;
+                opacity: 0.8;
+                cursor: pointer;
+            }
+        }
+    }
+}
